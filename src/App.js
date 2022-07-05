@@ -3,7 +3,7 @@ import axios from 'axios'
 import {useState, useEffect} from 'react'
 import Child from './Components/Child';
 import Head from './Components/Head';
-
+ 
 function App() {
 
   const [dataset, setdataset] = useState([]);
@@ -13,7 +13,7 @@ function App() {
     axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false')
     .then(res=>{
       setdataset(res.data);
-      console.log(res.data);
+      // console.log(res.data);
     })
     .catch(err=>{
       console.log(err);
